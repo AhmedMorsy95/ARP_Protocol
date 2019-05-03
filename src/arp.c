@@ -19,11 +19,11 @@ void parse_arp(){
 
      if(arp_pckt->opcode == ARP_REQUEST){
        printf("arp_request\n--------\n");
-       // print_arp_request_packet();
-       print_arp_request_packet();
+       print_arp_packet();
        arp_pckt->sip = ntohl(arp_pckt->sip);
        arp_pckt->dip = ntohl(arp_pckt->dip);
        arp_reply();
+       exit(0);	
      }
 }
 
@@ -52,7 +52,7 @@ void arp_reply(){
 
   ethernet_packet->ethertype = htons(ETH_P_ARP);
   printf("Arp reply \n-------\n");
-  print_arp_request_packet();
+  print_arp_packet();
   printf("\n\n");
   int bytes = tap_write(ethernet_packet,ethernet_len);
 

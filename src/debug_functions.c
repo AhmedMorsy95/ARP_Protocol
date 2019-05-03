@@ -38,7 +38,7 @@ void print_ipv4_address(uint32_t ip){
       ip_addr.s_addr = ip;
       printf("The IP address is %s\n", inet_ntoa(ip_addr));
 }
-void print_arp_request_packet(){
+void print_arp_packet(){
     printf("source MAC : ");
     print_mac_address(arp_pckt->smac);
     printf("source ip : ");
@@ -47,5 +47,6 @@ void print_arp_request_packet(){
     print_mac_address(arp_pckt->dmac);
     printf("destination ip : ");
     print_ipv4_address(arp_pckt->dip);
+    printf("\n");	
 
 }

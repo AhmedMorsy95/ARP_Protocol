@@ -15,10 +15,10 @@ void parse_ethernet(){
 
 void handle_packet(){
   if(ethernet_packet->ethertype == ETH_P_IP){
-      printf("The packet it an IPv4 packet, parsing it now\n\n");
+      printf("The packet is an IPv4 packet, parsing it now\n\n");
   }
   else if(ethernet_packet->ethertype == ETH_P_ARP){
-      printf("The packet it an ARP packet, parsing it now\n\n");
+      printf("The packet is an ARP packet, parsing it now\n\n");
       parse_arp();
   }
   else{

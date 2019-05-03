@@ -5,11 +5,10 @@
 #include "../headers/arp.h"
 
 int main(){
-  tap_init();
-  int x = 10;
 
-  while(x--){
-    printf("%d\n\n",x);
+  tap_init();
+
+  while(1){
     // read packets from tap device forever
     tap_read();
 

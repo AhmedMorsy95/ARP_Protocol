@@ -30,7 +30,7 @@ int tap_alloc(char *dev, int flags) {
 
    if (*dev) {
      strncpy(ifr.ifr_name, dev, IFNAMSIZ);
-     printf("opening device called : %s\n",dev);
+     printf("opening device called : %s\n\n",dev);
    }
 
    /* try to create the device */
@@ -69,7 +69,7 @@ int tap_read(){
      close(tap_fd);
      exit(1);
    }
-   printf("read from tap %d\n",nread);
+   printf("read from tap %d bytes\n\n",nread);
    return ethernet_len = nread;
 }
 
