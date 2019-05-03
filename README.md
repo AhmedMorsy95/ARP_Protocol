@@ -40,10 +40,22 @@ arping -I tap1 10.0.0.2
 
 You can ping any address in the subnet 10.0.0.x except for x=1 (specified for the tap device).
 
+Output should be like this :
+
+```
+Broadcast reply from 10.0.0.2 [MAC address]  0.876ms
+```
 ### Capturing packets using tshark
 
 open the terminal and run this command in sudo mode.
 
 ```
 tshark -i tap1
+```
+
+you should get output like this :
+
+```
+(Source MAC address) → Broadcast    ARP 42 Who has 10.0.0.2? Tell 10.0.0.1
+(Source MAC address) → Broadcast    ARP 42 10.0.0.2 is at MAC address
 ```
