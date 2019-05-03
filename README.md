@@ -4,7 +4,7 @@ Implementation of ARP protocol in C.
 
 ## Getting Started
 
-These instruction will help you get the project running on your machine.
+These instructions will help you get the project running on your machine.
 
 ### Setting tap Interface
 
