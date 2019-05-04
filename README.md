@@ -17,6 +17,7 @@ open the terminal and run these commands in sudo mode.
 openvpn --mktun --dev tap1
 ip link set tap1 up
 ip addr add 10.0.0.1/24 dev tap1
+ip link set tap1 up
 ```
 
 ### Runing the project
