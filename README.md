@@ -25,7 +25,7 @@ ip link set tap1 up
 open src folder and run this command.
 
 ```
-make && ./main && rm main
+make && ./main
 ```
 
 The project will start reading some IPv4 and IPv4 packets.
